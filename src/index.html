@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="styles.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <main class="game">
+            <img class="mario" src="../assets/mario.gif" alt="mario" />
+            <img class="pipe" src="../assets/pipe.png" alt="pipe" />
+            <img class="clouds" src="../assets/clouds.png" alt="clouds" />
+
+            <button class="start" onclick="startGame()">Start</button>
+        </main>
+        <section class="gameOver">
+            <h1>GAME OVER</h1>
+            <button class="restart" onclick="startGame()">Restart</button>
+        </section>
+    </body>
+    <script src="script.js"></script>
+</html>
