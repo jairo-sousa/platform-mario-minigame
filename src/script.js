@@ -18,7 +18,7 @@ const startGame = () => {
     start.style.display = "none";
 
     themeAudio.play();
-    gameStatus.isPlaying = !gameStatus.isPlaying;
+    gameStatus.isPlaying = true;
 
     requestAnimationFrame(gameLoop);
 };
@@ -99,7 +99,7 @@ document.addEventListener("keypress", (e) => {
     if (key === " ") {
         jump();
     }
-    if (key === "Enter") {
+    if (key === "Enter" && !gameStatus.isPlaying) {
         startGame();
     }
 });
