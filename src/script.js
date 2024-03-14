@@ -99,10 +99,6 @@ document.addEventListener("keypress", (e) => {
     if (key === " ") {
         jump();
     }
-});
-
-document.addEventListener("keypress", (e) => {
-    const key = e.key;
     if (key === "Enter") {
         startGame();
     }
