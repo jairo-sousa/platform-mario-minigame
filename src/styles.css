@@ -17,6 +17,7 @@
 }
 
 button {
+    border-radius: 8px;
     background: green;
     color: white;
     font-weight: bold;

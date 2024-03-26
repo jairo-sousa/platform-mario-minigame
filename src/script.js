@@ -11,18 +11,6 @@ const gameStatus = {
     isJumping: false,
 };
 
-const startGame = () => {
-    resetGame();
-
-    pipe.classList.add("animatedPipe");
-    start.style.display = "none";
-
-    themeAudio.play();
-    gameStatus.isPlaying = true;
-
-    requestAnimationFrame(gameLoop);
-};
-
 const resetGame = () => {
     gameOver.style.display = "none";
 
@@ -38,7 +26,19 @@ const resetGame = () => {
     gameOverAudio.currentTime = 0;
 
     themeAudio.currentTime = 0;
+    // themeAudio.play();
+};
+
+const startGame = () => {
+    resetGame();
+
+    pipe.classList.add("animatedPipe");
+    start.style.display = "none";
+
     themeAudio.play();
+    gameStatus.isPlaying = true;
+
+    requestAnimationFrame(gameLoop);
 };
 
 const jump = () => {
@@ -60,8 +60,10 @@ const endGame = () => {
     mario.classList.remove("jumping");
 
     mario.src = "../assets/game-over.png";
-    mario.style.width = "8opx";
+    mario.style.width = "80px";
     mario.style.marginLeft = "50px";
+
+    jump();
 
     themeAudio.pause();
 
